@@ -10,8 +10,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val varvar1 = intent.getStringExtra("Val1")?.toIntOrNull()?: 0
-        val varvar2 = intent.getStringExtra("val2")?.toIntOrNull()?: 0
+        val varvar1 = intent.getStringExtra("Val1")?.toDoubleOrNull()?: 0.0
+        val varvar2 = intent.getStringExtra("val2")?.toDoubleOrNull()?: 0.0
         val varvar3 = intent.getStringExtra("val3")
 
         if(varvar3 == "tasu"){
@@ -23,7 +23,7 @@ class SecondActivity : AppCompatActivity() {
         }else if(varvar3 == "waru"){
             textView.text="${varvar1} / ${varvar2} = ${varvar1 / varvar2}"
         }else if(varvar3 == "naiyo"){
-            textView.text="数字が入っていませんでしたお"
+            textView.text="数字が入っていませんでした"
         }
 
 
